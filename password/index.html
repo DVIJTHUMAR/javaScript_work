@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password</title>
+</head>
+
+<body>
+    <h1>Reset Password</h1>
+    <div>
+        <h3>Enter Old Password</h3>
+        <input type="text" name="password" id="oldp" />
+    </div>
+    <div>
+        <h3>Enter New Password</h3>
+        <input type="text" name="password" id="newp" />
+    </div>
+    <div>
+        <h3>ReEnter New Password</h3>
+        <input type="text" name="password" id="newp1" />
+    </div>
+
+    <div class="" style="margin: 10px; padding: 35px;">
+        <button id="btn" onclick="return ok()">SUBMIT</button>
+    </div>
+
+    <div id="print"></div>
+
+    <script>
+        function ok() {
+            var crtp = 'dvij123';
+            var newp = document.getElementById('newp').value;
+            var newp1 = document.getElementById('newp1').value;
+            var oldp = document.getElementById('oldp').value;
+
+            if (oldp == crtp) {
+                if(newp == newp1){
+                    document.getElementById('print').innerHTML = "Password change done !";
+                }else{
+                    document.getElementById('print').innerHTML = "Password not same..!";
+                }
+            } else {
+                document.getElementById('print').innerHTML = "Enter Curect Password";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Triangle Area Find</h1>
+
+    <input type="number" name="number" id="len" />
+    <input type="number" name="number" id="hei" />
+    <input type="button" value="SUBMIT" onclick="return print()" />
+
+    <h1 id="print"></h1>
+
+    <script>
+
+
+        function print() {
+            const n = document.getElementById("len").value;
+            const n1 = document.getElementById("hei").value;
+
+            
+            const triangleArea = TriangleArea(n , n1);
+            document.getElementById("print").innerHTML = `The area of the triangle with Lenth ${n} and Height ${n1} is: ${triangleArea}`;
+
+        }
+
+        function TriangleArea(l , h) {
+    
+            const area = (l*h)/2;
+            return area;
+        }
+
+    </script>
+</body>
+
+</html>

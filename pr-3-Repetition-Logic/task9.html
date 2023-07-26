@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 9</title>
+</head>
+
+<body>
+    <h2>your 0 and 30 between total show when you click this button</h2>
+    <input type="submit" onclick="return between()">
+    <div class="box" style="display: flex;"></div>
+
+    <script>
+        function between() {
+            var i = 0;
+            var t = '';
+            var sum = 0;
+            while (i <= 30) {
+                t += `<p> &nbsp ${i} &nbsp </p>`
+                sum = sum + i;
+                i++;
+            }
+            document.querySelector(".box").innerHTML = t + " = " + sum;
+        }
+    </script>
+</body>
+
+</html>

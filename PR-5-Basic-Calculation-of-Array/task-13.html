@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-13</title>
+</head>
+
+<body>
+
+    <h1 id="a"></h1>
+    <h1 id="b"></h1>
+
+    <script>
+
+        const p = "I often take a walk with my dog in the evening. His dog follows him everywhere. I don't feed my dog in the morning";
+
+        document.getElementById("a").innerHTML = "Old = " + p;
+        
+        // console.log(p.replaceAll('dog', 'cat'));
+
+        var x = p.replaceAll('dog', 'cat');
+        
+        document.getElementById("b").innerHTML = "New = " + x;
+
+
+    </script>
+</body>
+
+</html>

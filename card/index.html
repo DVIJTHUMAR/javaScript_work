@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+    <div class="box">
+        <div class="bg">
+            <div class="img"></div>
+            <div class="info" style="text-align: center; padding: 14px;">
+                <h1 class="py" id="name">Name</h1>
+                <p class="py birth-date">BOD</p>
+                <p class="py" id="gmail">Gmail</p>
+                <p class="py" id="company">Company</p>
+                <p class="py course">Course</p>
+                <p class="contact">Contact</p>
+                <p id="about">About</p>
+            </div>
+            <div class="icon">
+                <div class="i1">
+                    <img src="../card/images/github.svg" alt="git-img">
+                </div>
+                <div class="i2">
+                    <img src="../card/images/instagram.svg" alt="instagram">
+                </div>
+                <div class="i3">
+                    <img src="../card/images/facebook.svg" alt="face-book">
+                </div>
+                <div class="i4">
+                    <img src="../card/images/whatsapp.svg" alt="whatsapp">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var b="<b> BOD :-</b> 11/08/2000"
+        var mo ="<b> Contact :-</b> 8735815307"
+
+        document.getElementById("name").innerHTML="DVIJ <br> THUMAR"
+        document.querySelector(".birth-date").innerHTML= b
+        document.getElementById("gmail").innerHTML="<b> Gmail :- </b> dvijpatel222@gmail.com"
+        document.getElementById("company").innerHTML="<b> Company :- </b> Red & White"
+        document.querySelector(".course").innerHTML= "<b> Course :- </b> Full Stack Web-Devloper"
+        document.querySelector(".contact").innerHTML= mo
+        document.getElementById("about").innerHTML="<b> About :- </b> i'm fullstack devloper in red and white institute"
+        
+    </script>
+</body>
+</html>

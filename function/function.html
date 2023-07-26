@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+
+<body>
+
+
+    <script>
+        var c;
+
+        function multi() {
+            var a = 10;
+            var b = 5;
+            c = a * b;
+        }
+
+        multi();
+        console.log("in Function = ", c);
+
+        function table(x, n=10) {
+
+            for (i = 1; i <= n; i++) {
+
+                console.log(`${x} * ${i} = ${x * i}`);
+
+            }
+        }
+
+        table(5,5);
+
+        function maxValue(a,b,c) {
+            if(a>b){
+                if(a>c){
+                    console.log("A is max = ",a);
+                }else{
+                    console.log("C is max = ",c);
+                }
+            }else{
+                if(b>c){
+                    console.log("B is max = ",b);
+                }else{
+                    console.log("C is max = ",c);
+                }
+            }
+        }
+
+        maxValue(10,55,2);
+
+
+        function sumC(x,y){
+
+            var c = x + y;
+
+            return c;
+        }
+
+       var x = sumC(20,30);
+        console.log(x);
+
+       var y = sumC(50,30);
+        console.log(y);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+
+<body>
+    <input type="text" id="input" />
+    <input type="button" value="SUBMIT" onclick="return multiplication()" />
+    <p id="table"></p>
+
+    
+
+    <script>
+
+        function multiplication() {
+            var n = parseInt(document.getElementById('input').value);
+            var t = 1;
+            var total = '';
+            var v = '';
+
+            while (t <= 10) {
+                total = n * t;
+                v += `<p>${n}  *  ${t}  =  ${total}</p>`;
+                t++;
+            }
+
+            document.getElementById('table').innerHTML = v;
+        }
+
+
+    </script>
+</body>
+
+</html>

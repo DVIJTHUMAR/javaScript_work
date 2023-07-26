@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>t1</title>
+</head>
+<body>
+
+    <h1 id="colrp" ></h1>
+    <h1 id="colrp1" ></h1>
+    <h1 id="colrp2" ></h1>
+    <h1 id="colrp3" ></h1>
+    <h1 id="colrp4" ></h1>
+    <h1 id="colrp5" ></h1>
+    
+    <script>
+
+        // Array [ red , green , white , black ];
+
+        var mycolor = [" red "," green "," white "," black "];
+
+        document.getElementById("colrp").innerHTML = " Array = " + mycolor;
+
+        // join [ red + green + white + black ]
+        
+        var a = mycolor.join(" + ");
+        console.log(mycolor.join(" + "));
+        
+        document.getElementById("colrp1").innerHTML = " join = " + a;
+        
+        // pop [ red , green , white ]
+        
+        var b = mycolor.pop();
+        
+        document.getElementById("colrp2").innerHTML = " pop = " + mycolor;
+              
+        // shift [ red ]
+        
+        var c = mycolor.shift();
+        
+        document.getElementById("colrp3").innerHTML = "shift = " + c;
+
+        // slice [ green , white ]
+
+        var mycolor = [" red "," green "," white "," black "];
+        
+        var d = mycolor.slice(1,3);
+        
+        document.getElementById("colrp4").innerHTML = "slice = " + d;
+
+        // push [ red , green , white , black , orange ]
+        
+        var mycolor = [" red "," green "," white "," black "];
+
+        var e = mycolor.push(" orange ");
+        
+        document.getElementById("colrp5").innerHTML = " push = " + mycolor;
+       
+       
+    </script>
+</body>
+</html>

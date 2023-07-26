@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+
+    <input type="text" id="postion" />
+    <input type="text" id="value" />
+    <input type="button" value="SUBMIT" onclick="return on()">
+
+    <h1 id="pri"></h1>
+
+    <script>
+
+        var array = [10, 20, 30, 40, 50];
+
+        console.log("array = ", array);
+
+        array[2] = 300;
+
+        console.log("array = ", array);
+
+        for (i = 0; i <= array.length - 1; i++) {
+
+            console.log(`Array ${i} ==== Array ${array[i]}`);
+
+        }
+
+        function on() {
+
+            var a = document.getElementById("postion").value;
+            var b = document.getElementById("value").value;
+
+        }
+
+        function test(posi, value) {
+
+            array[posi] = value;
+
+        }
+
+        test(1, 99);
+        console.log("array = ", array);
+
+        var array = new Array(5);
+        array[0] = 10;
+        console.log("array new === ",array);
+
+        var array = [1,2,3,4,5,[10,20,30,40,50]];
+        console.log("dbl array === ",array);
+
+        console.log("position of array in array = ",array[5][1]);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> <span class="gm"> Good Morning.....</span>,<span id="gms">Student</span> </h1>
+    <p id="wel">Welcome to JavaScript</p>
+    <p><span id="end"></span></p>
+
+    <script>
+        var a=20,b=20;
+        var ans=a+b;
+        var y="Thank You";
+
+    // console.log
+
+        console.log("Ans :- ",ans);
+        console.error("Ans :- ",ans);
+        console.warn("Ans :- ",ans);
+        console.info("Ans :- ",ans);
+
+    // document.write    
+
+        document.write("Ans :- ",ans);
+
+    // window.alert
+
+        window.alert("Ans :- "+ans);
+
+    //   .innerHTML
+    
+        document.querySelector(".gm").innerHTML="Good Afternoon"
+        document.querySelector("#gms").innerHTML="Clevar Students"
+
+        document.getElementById("wel").innerHTML=" wc to js"
+        document.getElementById("end").innerHTML= y;
+
+    </script>
+</body>
+</html>

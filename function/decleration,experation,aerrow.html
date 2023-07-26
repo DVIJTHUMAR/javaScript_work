@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function type</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //decleration function
+
+        function multi(a, b) {
+
+            console.log("multiple = ", a * b);
+
+        }
+
+        multi(5, 10);
+
+        //experation function
+
+        var persantage = function (a, b, c) {
+
+            // var a = 50;
+            // var b = 20;
+            // var c = 100;
+
+            console.log("sum = ", a + b + c);
+
+        }
+
+        persantage(20, 50, 10);
+
+        //aerrow function
+
+        var aerrow = (a, b) => {
+
+            // var a = 30;
+            // var b = 20;
+
+            console.log("Aerrow Mul = ", a * b);
+
+        }
+
+        aerrow(50, 30);
+
+        //single argument aerrow function
+
+        var aerrow = n => " WELCOME " + n;
+
+        var y = aerrow("DVIJ");
+        console.log(y);
+
+        //recurstion return function
+
+        function pluse(n) {
+
+            // console.log(n);
+
+            var y = n + 1;
+            console.log(n);
+
+            if (y >= 0 && y <= 10) {
+                return pluse(y);
+            } else {
+                return 0;
+            }
+
+        }
+
+        pluse(0);
+
+    </script>
+</body>
+
+</html>

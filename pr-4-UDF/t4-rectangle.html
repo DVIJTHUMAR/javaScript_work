@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Rectangle Area Find</h1>
+
+    <input type="number" name="number" id="len" />
+    <input type="number" name="number" id="hei" />
+    <input type="button" value="SUBMIT" onclick="return print()" />
+
+
+    <h2 id="print"></h2>
+
+    <script>
+
+
+        function print() {
+            const n = document.getElementById("len").value;
+            const n1 = document.getElementById("hei").value;
+
+            
+            const Rectanglearea = rectangleArea(n , n1);
+            document.getElementById("print").innerHTML = `The area of the Rectangle with Lenth ${n} and Height ${n1} is: ${Rectanglearea}`;
+
+        }
+
+        function rectangleArea(l , h) {
+    
+            const area = (l*h);
+            return area;
+        }
+
+    </script>
+</body>
+
+</html>

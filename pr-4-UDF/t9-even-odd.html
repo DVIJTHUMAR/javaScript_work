@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Even Or Odd</h1>
+
+    <input type="number" name="number" id="nn" />
+
+    <input type="button" value="SUBMIT" onclick="return pri()" />
+
+
+    <h2 id="print"></h2>
+
+    <script>
+
+
+        function pri() {
+            const n = document.getElementById("nn").value;
+
+            find(n);
+
+        }
+        
+        function find(number) {
+            
+            if (number % 2 === 0) {
+                document.getElementById("print").innerHTML =  `${number} is Even`;
+            } else {
+                document.getElementById("print").innerHTML =  `${number} is Odd`;
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculation</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+
+    <style>
+        body {
+            background-image: url(./img.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <section class="py-3 col-4 abc">
+        <div class="container">
+            <div class="row text-center d-flex">
+                <div class="user d-flex justify-content-center col">
+                    <div class=" w-50 p-3">
+                        <label class="fw-bold text-white fs-6 mb-3">Principal Amount : </label><input class="ms-2 mb-3 bg-body-secondary"
+                            type="text" id="pri" /><br />
+                        <label class="fw-bold text-white fs-6 mb-3">Number of years : </label><input class="ms-2 mb-3 bg-body-secondary"
+                            type="text" id="noy" /><br />
+                        <input class="fw-bold bg-gradient" type="button" value="SUBMIT" onclick="return showData()" />
+                    </div>
+                </div>
+                <div class="text-black fw-bold fs-4" id="erroer"></div>
+                <div class="box">
+                    <h1 class="fw-bold text-white fs-5 mb-3" id="PrincipalAmount"></h1>
+                    <h1 class="fw-bold text-white fs-5 mb-3" id="Rateofinterest"></h1>
+                    <h1 class="fw-bold text-white fs-5 mb-3" id="Numberofyears"></h1>
+                    <h1 class="fw-bold text-white fs-5 mb-3" id="Totalaccruedamount"></h1>
+                    <h1 class="fw-bold text-white fs-5 mb-3" id="Interest"></h1>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        function showData() {
+            var p = document.getElementById("pri").value;
+            var n = document.getElementById("noy").value;
+
+            if ( p == '' && n == '') {
+                document.getElementById('erroer').innerHTML = "Please Enter Vlaue..";
+            } else {
+                if (parseInt(n) >= 0 && parseInt(n) <= 3) {
+                    document.getElementById('erroer').innerHTML = "Sorry minimum year Required is 4...";
+                    document.getElementById("PrincipalAmount").innerHTML = " ";
+                    document.getElementById("Rateofinterest").innerHTML = " ";
+                    document.getElementById("Numberofyears").innerHTML = " ";
+                    document.getElementById("Totalaccruedamount").innerHTML = " ";
+                    document.getElementById("Interest").innerHTML = " ";
+                }
+                else {
+                    if (parseInt(n) > 3 && parseInt(n) <= 5) {
+                        document.getElementById('erroer').innerHTML = " ";
+                        r = 3;
+                    } else if (parseInt(n) > 5 && parseInt(n) <= 8) {
+                        document.getElementById('erroer').innerHTML = " ";
+                        r = 5;
+                    } else if (parseInt(n) > 8 && parseInt(n) <= 12) {
+                        document.getElementById('erroer').innerHTML = " ";
+                        r = 12;
+                    } else {
+                        document.getElementById('erroer').innerHTML = " ";
+                        r = 15;
+                    }
+                    var A = parseInt(p) * (1 + (r * parseInt(n) / 100));
+                    var I = A - p;
+
+                    document.getElementById("PrincipalAmount").innerHTML = "Principal Amount : " + parseInt(p);
+                    document.getElementById("Rateofinterest").innerHTML = "Rate of interest = " + r;
+                    document.getElementById("Numberofyears").innerHTML = "Number of years = " + parseInt(n);
+                    document.getElementById("Totalaccruedamount").innerHTML = "Total accrued amount = " + A;
+                    document.getElementById("Interest").innerHTML = "Interest = " + I;
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>

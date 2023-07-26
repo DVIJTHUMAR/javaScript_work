@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 id="aaa"></h1>
+    <h1 id="bbb"></h1>
+    <h1 id="ccc"></h1>
+
+
+    <script>
+        var numbers = [23, 20, 17, 12, 5, 0, 1, 5, 12, 19, 20];
+
+        // Sort in ascending order
+        var ascendingOrder = numbers.sort ((a, b) => a-b );
+
+        console.log("Ascending order: " + ascendingOrder);
+        document.getElementById("aaa").innerHTML = "Ascending order : " + ascendingOrder;
+
+        // Sort in descending order
+        var descendingOrder = numbers.sort((a, b) => b-a);
+
+        console.log("Descending order: " + descendingOrder);
+        document.getElementById("bbb").innerHTML = "Descending order : " + descendingOrder;
+
+        // Sort Color
+
+       var myColor = [" Red ", " Green ", " White ", " Black "];
+
+        myColor.sort();
+
+       document.getElementById("ccc").innerHTML = "new color : " + myColor;
+
+    </script>
+</body>
+
+</html>

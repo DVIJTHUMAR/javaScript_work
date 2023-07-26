@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 13</title>
+</head>
+<body>
+    <h2>Pattern</h2>
+    <input type="text" id="no">
+    <input type="submit" onclick="return patterns()">
+    <div class="box"></div>
+
+    <script>
+        function patterns(){
+    var i ;
+    var j ; 
+    var t = ''
+    var no =document.getElementById("no").value;
+
+    for(i = 1 ; i <= no ; i++){
+        for(j = no ; j >= ((no-i)+1) ;j--){
+            t += `<span>${j}<span/>`
+        }
+        t += `<br/>` ;
+    }
+    document.querySelector(".box").innerHTML = t;
+    
+}
+    </script>
+</body>
+</html>

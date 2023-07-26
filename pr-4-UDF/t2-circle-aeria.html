@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Circle Area Find</h1>
+
+    <input type="number" name="number" id="number" />
+    <input type="button" value="SUBMIT" onclick="return print()" />
+
+    <h1 id="print"></h1>
+
+    <script>
+
+
+        function print() {
+            const r = document.getElementById("number").value;
+
+            const circleArea = CircleArea(r);
+            document.getElementById("print").innerHTML = `The area of the circle with radius ${r} is: ${circleArea}`;
+
+        }
+
+        function CircleArea(r) {
+            const pi = 3.14;
+            const area = pi * r * r;
+            return area;
+        }
+
+    </script>
+</body>
+
+</html>

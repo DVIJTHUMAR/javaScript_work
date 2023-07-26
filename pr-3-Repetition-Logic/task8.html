@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 8</title>
+</head>
+
+<body>
+
+    <h2>Disarium Number</h2>
+    <input type="text" id="st">
+
+    <h2>enter your ending range</h2>
+    <input type="text" id="end">
+    <input type="submit" onclick="return  disarium()">
+    <div class="box"></div>
+
+    <script>
+        function disarium() {
+            var st = parseInt(document.getElementById("st").value);
+            var end = parseInt(document.getElementById("end").value)
+            var i = 1;
+            var t = ''
+            while (i <= end) {
+                if (i > st && i < end) {
+                    t += `<span> ${i} </span>`
+                }
+                i++;
+            }
+            document.querySelector(".box").innerHTML = t;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Fahrenheit To Celsius</h1>
+
+    <input type="number" name="number" id="ff" />
+    
+    <input type="button" value="SUBMIT" onclick="return print()" />
+
+
+    <h2 id="print"></h2>
+
+    <script>
+
+
+        function print() {
+            const n = document.getElementById("ff").value;
+            
+            const FahrenheitToCelsius = find(n);
+            document.getElementById("print").innerHTML = `Fahrenheit ${n} To Celsiusis is: ${FahrenheitToCelsius}`;
+
+        }
+
+        function find(f) {
+    
+            const c = (f-32)/1.8;
+            return c;
+        }
+
+    </script>
+</body>
+
+</html>

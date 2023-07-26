@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="box">
+        <h1>Students  Mark</h1>
+
+        <label for="number">Maths</label>
+        <br>
+        <input type="number" placeholder=" maths" id="maths">
+        <br>
+        <label for="number">Science</label>
+        <br>
+        <input type="number" placeholder=" science" id="science"> 
+        <br>
+        <label for="number">Ss</label>
+        <br>
+        <input type="number" placeholder=" ss" id="ss">
+        <br>
+        <label for="number">English</label>
+        <br>
+        <input type="number" placeholder=" english" id="english">
+        <br>
+        <label for="number">Hindi</label>
+        <br>
+        <input type="number" placeholder=" hindi" id="hindi">
+        <br>
+
+        <button onclick="showdata()"> Submit</button>
+      <p id="showper"></p>
+
+    </div>
+
+    <script>
+
+
+        function showdata(){
+        var maths = document.getElementById("maths").value;
+        var science = document.getElementById("science").value;
+        var ss = document.getElementById("ss").value;
+        var english = document.getElementById("english").value;
+        var hindi = document.getElementById("hindi").value;
+
+        var total = parseInt (maths) +parseInt(science) +parseInt(ss) +parseInt(english) +parseInt(hindi); 
+        var percentage =(total/500)*100;
+
+    
+        document.getElementById("showper").innerHTML= ` Total 500<br> Total sum =${total}
+        <br>
+        Percentage ${percentage}% `;
+
+    }
+    </script>
+
+</body>
+</html>

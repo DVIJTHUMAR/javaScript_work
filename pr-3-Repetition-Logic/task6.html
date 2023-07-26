@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 6</title>
+</head>
+
+<body>
+    <h2>Prime Number</h2>
+    <input type="text" id="no">
+    <input type="submit" onclick="return prime()">
+    <div class="box"></div>
+
+    <script>
+        function prime() {
+            var i = 1;
+            var no = parseInt(document.getElementById("no").value)
+            var t = ''
+
+            while (i <= no) {
+                if (i % 2 != 0) {
+                    t += `<span> ${i} </span>`
+                }
+                i++;
+            }
+            document.querySelector(".box").innerHTML = t;
+        }
+    </script>
+</body>
+
+</html>

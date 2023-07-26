@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Swaping</h1>
+
+    <input type="number" name="number" id="nn" />
+    <input type="number" name="number" id="nnn" />
+
+    <input type="button" value="SUBMIT" onclick="return pri()" />
+
+
+    <h2 id="print"></h2>
+    <h2 id="print1"></h2>
+
+    <script>
+
+
+        function pri() {
+            const n = parseInt(document.getElementById("nn").value);
+            const n1 = parseInt(document.getElementById("nnn").value);
+
+            find(n,n1);
+
+        }
+        
+        function find(a,b) {
+            
+            document.getElementById("print").innerHTML = "Before swapping : " + a + " || " + b ;
+
+            var a = a + b;
+            var b = a - b;
+            var a = a - b;
+
+            document.getElementById("print1").innerHTML = "After swapping : " + a + " || " + b ;
+
+        }
+
+    </script>
+</body>
+
+</html>

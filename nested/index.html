@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested</title>
+</head>
+
+<style>
+    .box {
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn {
+        text-align: center;
+    }
+
+    .u1 {
+        display: block;
+        margin: 10px;
+        padding: 5px;
+    }
+</style>
+
+<body>
+
+    <div class="box">
+        <div class="btn">
+            <input type="number" name="user-value" class="u1" id="user" placeholder="Enter value of A" />
+            <input type="number" name="user-value" class="u1" id="user2" placeholder="Enter value of B" />
+            <input type="number" name="user-value" class="u1" id="user3" placeholder="Enter value of C" />
+            <input type="number" name="user-value" class="u1" id="user4" placeholder="Enter value of D" />
+            <input type="button" value="SUBMIT" onclick="return data()"/>
+        </div>
+    </div>
+
+    <h1 id="max"></h1>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

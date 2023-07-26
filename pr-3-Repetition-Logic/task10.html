@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 10</title>
+</head>
+
+<body>
+    <h2>Fizz Buzz</h2>
+    <input type="text" id="no">
+    <input type="submit" onclick="return fizz()">
+    <div class="box"></div>
+
+    <script>
+        function fizz() {
+            var i = 1;
+            var no = parseInt(document.getElementById("no").value);
+            var t = '';
+            while (i <= no) {
+                if (i % 5 == 0 && i % 3 == 0) {
+                    t += `<p> ${i}= Fizzbuzz</p>`
+                }
+                else if (i % 3 == 0) {
+                    t += `<p> ${i}= Fizz</p>`
+                }
+                else if (i % 5 == 0) {
+                    t += `<p> ${i}= buzz</p>`
+                }
+                else {
+                    t += `<p> ${i}</p>`;
+                }
+                i++;
+            }
+            document.querySelector(".box").innerHTML = t;
+
+        }
+    </script>
+</body>
+
+</html>

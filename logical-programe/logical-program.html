@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logicle-Program</title>
+</head>
+<body>
+    
+    <div class="">
+
+        <h1>Gross Sallary Calculation</h1>
+        <div>
+            <input type="text" id="n"/> <br/>
+            <input type="text" id="input-sallary"/> <br/>
+            <input type="button" value="SUBMIT" onclick="return showId()"/>
+    
+            <h1 id="name"></h1>
+            <h2 id="basic"></h2>
+            <h2 id="hra"></h2>
+            <h2 id="ta"></h2>
+            <h2 id="da"></h2>
+            <h2 id="gs"></h2>
+            
+        </div>
+
+    </div>
+    <script>
+        function showId(){
+
+        var name = document.getElementById("n").value;
+        var basic = parseInt(document.getElementById("input-sallary").value);
+        var hra = (basic*10)/100;
+        var ta = (basic*5)/100;
+        var da = (basic*2)/100;
+        var gs = basic + hra + ta + da;
+
+        document.getElementById("name").innerHTML = "NAME : " + name;
+        document.getElementById("basic").innerHTML = "Basic Sallary = " + basic;
+        document.getElementById("hra").innerHTML = "HRA = " + hra;
+        document.getElementById("ta").innerHTML = "TA = " + ta;
+        document.getElementById("da").innerHTML = "DA = " + da;
+        document.getElementById("gs").innerHTML = "Gross Sallary = " + gs;
+
+        }
+
+    </script>
+</body>
+</html>
